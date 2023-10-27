@@ -1,5 +1,5 @@
 
-import {register, login, findUser} from "../../controllers/Auth.js";
+import {register, login, findUser} from "../../controllers/User.js";
 
 const resolvers = {
     Query: {

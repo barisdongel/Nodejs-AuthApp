@@ -2,8 +2,8 @@ import {DataTypes} from 'sequelize';
 import sequelize from './connect.js';
 
 
-const tableName = 'db_example';
-const Auth = sequelize.define(tableName, {
+const tableName = 'user';
+const User = sequelize.define(tableName, {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -26,4 +26,4 @@ const Auth = sequelize.define(tableName, {
 });
 
 
-export default Auth;
+export default User;

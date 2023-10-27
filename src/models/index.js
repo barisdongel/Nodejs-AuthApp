@@ -1,8 +1,8 @@
-import Auth from "./auth.model.js";
+import User from "./user.model.js";
 
 
 const models = [
-    Auth
+    User
 ];
 
 
