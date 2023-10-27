@@ -3,7 +3,6 @@ import router from "./routes/index.js";
 import {config, port} from "./config/config.js";
 import startApollo from "./graphql/index.js";
 
-
 const app = express();
 
 await config(app)
