@@ -1,8 +1,8 @@
-import Example from "./example.model.js";
+import Auth from "./auth.model.js";
 
 
 const models = [
-    Example
+    Auth
 ];
 
 

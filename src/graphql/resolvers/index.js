@@ -1,9 +1,9 @@
 
-import {register, findExample, login} from "../../controllers/Example.js";
+import {register, login, findUser} from "../../controllers/Auth.js";
 
 const resolvers = {
     Query: {
-        findExample
+        findUser
     },
     Mutation: {
         register,

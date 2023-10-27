@@ -1,5 +1,4 @@
-import Response from "../utils/Response.js";
-import ExampleModel from "../models/example.model.js";
+import AuthModel from "../models/auth.model.js";
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 
@@ -11,10 +10,9 @@ export const example = async (req, res) => {
     return Response.success(res, {message: "Example"})
 }
 
+export const findUser = async (_) => {
 
-export const findExample = async (_) => {
-
-    const dataList = ExampleModel.findAll()
+    const dataList = AuthModel.findAll()
     return dataList
 
 }
@@ -26,7 +24,7 @@ export const register = async (_, params) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Veritabanına hash'lenmiş şifre ile kayıt yap
-    const create = await ExampleModel.create({
+    const create = await AuthModel.create({
         name,
         email,
         password: hashedPassword,
@@ -49,7 +47,7 @@ export const login = async (_, params) => {
     const { email, password } = params;
 
 
-    const user = await ExampleModel.findOne({ where: { email } });
+    const user = await AuthModel.findOne({ where: { email } });
 
     if (!user) {
         throw new Error('Kullanıcı bulunamadı');

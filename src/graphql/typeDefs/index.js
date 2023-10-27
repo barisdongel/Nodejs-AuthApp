@@ -6,16 +6,17 @@ const typeDefs = gql`
     scalar Object
     scalar Date
    
-    type Examples{
+    type findUser{
         id:ID
         name:String
-        surname:String
+        email:String
+        password:String
         createdAt:Date
         updatedAt:Date
     }
 
     type Query {
-        findExample: [Examples]
+        findUser: [findUser]
     }
     
     type Mutation {
