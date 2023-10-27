@@ -1,14 +1,14 @@
 
-import {findExample} from "../../controllers/Example.js";
-
+import {register, findExample, login} from "../../controllers/Example.js";
 
 const resolvers = {
     Query: {
         findExample
     },
-    // Mutation: {
-    //     login
-    // }
+    Mutation: {
+        register,
+        login
+    }
 };
 
 

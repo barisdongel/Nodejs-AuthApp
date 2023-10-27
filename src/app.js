@@ -9,11 +9,8 @@ const app = express();
 await config(app)
 router(app)
 
-
-await startApollo(app);
-
-
 app.listen(port, () => {
     console.log(`Uygulama http://localhost:${port} adresinde çalışıyor.`);
 });
 
+await startApollo(app);

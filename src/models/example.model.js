@@ -13,7 +13,11 @@ const Example = sequelize.define(tableName, {
         type: DataTypes.STRING,
         allowNull: true,
     },
-    surname: {
+    email: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    password: {
         type: DataTypes.STRING,
         allowNull: true,
     }
